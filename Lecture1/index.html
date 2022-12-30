@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React Everyone</title>
+    <link rel="stylesheet" href="index.css"></link>
 </head>
 <body>
     <div id="root">
@@ -17,10 +18,12 @@
         const root = ReactDOM.createRoot(document.querySelector("#root"));
         
         // creating element 
-        const heading = React.createElement("h1",{},"heading1")
+        const heading = React.createElement("h1",{id:"h1"},"heading1")
+        const heading2 = React.createElement("h2",{id:"h2"},"heading 2")
 
+        const container = React.createElement("div",{className:"container"},[heading,heading2]);
         //passing the element to root
-        root.render(heading)
+        root.render(container)
 
     </script>
 </body>

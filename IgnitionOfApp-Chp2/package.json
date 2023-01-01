@@ -2,7 +2,6 @@
   "name": "ignitionofapp-chp2",
   "version": "1.0.0",
   "description": "This is Igniting our React app",
-  
   "scripts": {
     "test": "jest"
   },
@@ -24,7 +23,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "browsersList":[
+  "browsersList": [
     "last 2 versions"
   ]
 }

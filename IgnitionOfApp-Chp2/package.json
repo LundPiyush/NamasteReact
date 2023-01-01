@@ -1,0 +1,30 @@
+{
+  "name": "ignitionofapp-chp2",
+  "version": "1.0.0",
+  "description": "This is Igniting our React app",
+  
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LundPiyush/NamasteReact.git"
+  },
+  "author": "Piyush Lund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LundPiyush/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/LundPiyush/NamasteReact#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browsersList":[
+    "last 2 versions"
+  ]
+}

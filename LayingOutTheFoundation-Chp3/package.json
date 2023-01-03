@@ -1,0 +1,19 @@
+{
+  "name": "layingoutthefoundation-chp3",
+  "version": "1.0.0",
+  "description": "creating React App usinh JSX",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LundPiyush/NamasteReact.git"
+  },
+  "author": "Piyush Lund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LundPiyush/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/LundPiyush/NamasteReact#readme"
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import img from "./assets/reactjs.png";
 /*
 Create a Nested header Element using React.createElement(h1,h2,h3 inside a div with class “title”)
 Create the same element using JSX
@@ -74,6 +74,7 @@ const TitleComponent = () => {
 const NestedComponent = () => {
   return (
     <div>
+      <HeaderComponent />
       {container}
       {header_jsx}
       {/* {TitleComponent} It does not work and warning is thrown in console since TitleComponent is a component and not a react element*/}
@@ -84,7 +85,22 @@ const NestedComponent = () => {
   );
 };
 
-const HeaderComponent = () => <div></div>;
+const HeaderComponent = () => (
+  <div>
+    <nav className="nav-bar">
+      <div className="logo-image">
+        <img src={img} height="35" width="35" href="#"></img>
+      </div>
+      <a href="#" className="logo-name">
+        Namaste 🙏🏻 React
+      </a>
+      <div className="form-search">
+        <input />
+        <button>Search</button>
+      </div>
+    </nav>
+  </div>
+);
 // task 1
 //root.render(container);
 

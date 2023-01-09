@@ -1,0 +1,28 @@
+{
+  "name": "foodvilla",
+  "version": "1.0.0",
+  "description": "Food Villa is an app just like zomato",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LundPiyush/NamasteReact.git"
+  },
+  "author": "Piyush Lund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LundPiyush/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/LundPiyush/NamasteReact#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

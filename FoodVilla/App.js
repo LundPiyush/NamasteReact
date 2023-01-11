@@ -8,19 +8,17 @@ import { IMG_CDN_URL } from "./src/components/constants";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Confif Driven UI
-const RestaurantCard = (props) => {
-  console.log(props);
+const RestaurantCard = ({ restaurant }) => {
+  //console.log(props);
   return (
     <div className="card">
-      <img src={IMG_CDN_URL + props.restaurant.data?.cloudinaryImageId}></img>
-      <h2 className="card-title">{props.restaurant.data?.name}</h2>
-      <h4 className="card-cuisine">
-        {props.restaurant.data?.cuisines.join(", ")}
-      </h4>
+      <img src={IMG_CDN_URL + restaurant.data?.cloudinaryImageId}></img>
+      <h3 className="card-title">{restaurant.data?.name}</h3>
+      <h5 className="card-cuisine">{restaurant.data?.cuisines.join(", ")}</h5>
       <div className="card-rating">
-        <span>{props.restaurant.data?.avgRating} stars</span>
-        <span>{props.restaurant.data?.slaString}</span>
-        <span>{props.restaurant.data?.costForTwoString}</span>
+        <span>{restaurant.data?.avgRating} stars</span>
+        <span>{restaurant.data?.slaString}</span>
+        <span>{restaurant.data?.costForTwoString}</span>
       </div>
     </div>
   );

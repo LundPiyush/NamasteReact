@@ -2,40 +2,38 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import HeaderComponent from "./src/components/HeaderComponent";
+import { restaurantList } from "./src/components/constants";
+import { IMG_CDN_URL } from "./src/components/constants";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const obj = {
-  img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zg5wf1kmlqccfcat1bht",
-  title: "Burger King",
-  cuisines: ["American", "Burger"],
-  rating: "4.2",
-};
-const RestaurantCard = () => {
+// Confif Driven UI
+const RestaurantCard = (props) => {
+  console.log(props);
   return (
     <div className="card">
-      <img src={obj.img}></img>
-      <h2 className="card-title">{obj.title}</h2>
-      <h3 className="card-cuisine">{obj.cuisines.join(",")}</h3>
-      <h4>{obj.rating} stars </h4>
+      <img src={IMG_CDN_URL + props.restaurant.data?.cloudinaryImageId}></img>
+      <h2 className="card-title">{props.restaurant.data?.name}</h2>
+      <h4 className="card-cuisine">
+        {props.restaurant.data?.cuisines.join(", ")}
+      </h4>
+      <div className="card-rating">
+        <span>{props.restaurant.data?.avgRating} stars</span>
+        <span>{props.restaurant.data?.slaString}</span>
+        <span>{props.restaurant.data?.costForTwoString}</span>
+      </div>
     </div>
   );
 };
 const BodyComponent = () => {
   return (
     <div className="restaurant-list">
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
+      <RestaurantCard restaurant={restaurantList[0]} />
+      <RestaurantCard restaurant={restaurantList[1]} />
+      <RestaurantCard restaurant={restaurantList[2]} />
+      <RestaurantCard restaurant={restaurantList[3]} />
+      <RestaurantCard restaurant={restaurantList[4]} />
+      <RestaurantCard restaurant={restaurantList[5]} />
     </div>
   );
 };

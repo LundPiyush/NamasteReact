@@ -30,6 +30,7 @@ const BodyComponent = () => {
 
         {/* <RestaurantCard {...restaurantList[0].data} />
       <RestaurantCard {...restaurantList[1].data} />
+      <Hi hello ajajb z>
       */}
       </div>
     </>

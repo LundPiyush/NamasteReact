@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import HeaderComponent from "./src/components/HeaderComponent";
-import BodyComponent from "./src/components/BodyComponent";
-import { restaurantList } from "./src/components/constants";
-import { IMG_CDN_URL } from "./src/components/constants";
+import HeaderComponent from "./components/HeaderComponent";
+import BodyComponent from "./components/BodyComponent";
+import { restaurantList } from "./components/constants";
+import { IMG_CDN_URL } from "./components/constants";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// Confif Driven UI
+// Config Driven UI
 
 const FooterComponent = () => {
   return (

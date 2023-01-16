@@ -1,4 +1,6 @@
+import { useState } from "react";
 import img from "../../assets/fv.png";
+
 const HeaderComponent = () => {
   return (
     <nav className="nav-bar">

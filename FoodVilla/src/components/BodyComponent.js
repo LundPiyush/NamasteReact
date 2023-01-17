@@ -37,7 +37,7 @@ const BodyComponent = () => {
 
   // Not return component (Early return)
   if (!allRestaurants) return null;
-  if (filteredRestaurants.length === 0) return <h3>No match found</h3>;
+  //if (filteredRestaurants.length === 0) return <h3>No match found</h3>;
   return allRestaurants.length === 0 ? (
     <Shimmer />
   ) : (

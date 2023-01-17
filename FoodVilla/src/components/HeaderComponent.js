@@ -1,5 +1,8 @@
+import { useState } from "react";
 import img from "../../assets/fv.png";
+
 const HeaderComponent = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <nav className="nav-bar">
       <div className="logo-image">
@@ -24,6 +27,11 @@ const HeaderComponent = () => {
           <a href="#">Cart</a>
         </li>
       </ul>
+      {isLoggedIn ? (
+        <button onClick={() => setIsLoggedIn(false)}>Login</button>
+      ) : (
+        <button onClick={() => setIsLoggedIn(true)}>Log out</button>
+      )}
     </nav>
   );
 };

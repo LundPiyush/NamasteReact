@@ -3,8 +3,10 @@ import ReactDOM from "react-dom/client";
 
 import HeaderComponent from "./components/HeaderComponent";
 import BodyComponent from "./components/BodyComponent";
-import { restaurantList } from "./components/constants";
-import { IMG_CDN_URL } from "./components/constants";
+import About from "./components/About";
+// import { restaurantList } from "./components/constants";
+// import { IMG_CDN_URL } from "./components/constants";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -26,4 +28,15 @@ const AppComponent = () => {
     </>
   );
 };
-root.render(<AppComponent />);
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppComponent />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+]);
+
+root.render(<RouterProvider router={appRouter} />);

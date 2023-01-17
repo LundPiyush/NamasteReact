@@ -1,5 +1,5 @@
 import { useState } from "react";
-import img from "../../assets/fv.png";
+import img from "../assets/fv.png";
 
 const HeaderComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);

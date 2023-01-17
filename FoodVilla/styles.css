@@ -106,3 +106,10 @@ h5 {
   display: flex;
   flex-wrap: wrap;
 }
+
+.shimmer-card {
+  width: 250px;
+  height: 350px;
+  margin: 20px;
+  background: lightgray;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import img from "../assets/fv.png";
+import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -13,18 +14,18 @@ const HeaderComponent = () => {
       </a>
       <ul className="nav-list">
         <li>
-          <a className="link-active" href="#">
+          <Link className="link-active" to="/">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <a href="#">Cart</a>
+          <Link href="/">Cart</Link>
         </li>
       </ul>
       {isLoggedIn ? (

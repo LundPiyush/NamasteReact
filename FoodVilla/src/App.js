@@ -7,7 +7,8 @@ import About from "./components/About";
 import Error from "./components/Error";
 // import { restaurantList } from "./components/constants";
 // import { IMG_CDN_URL } from "./components/constants";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Contact from "./components/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -24,7 +25,7 @@ const AppComponent = () => {
   return (
     <>
       <HeaderComponent />
-      <BodyComponent />
+      <Outlet />
       <FooterComponent />
     </>
   );
@@ -34,10 +35,20 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <AppComponent />,
     errorElement: <Error />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    children: [
+      {
+        path: "/",
+        element: <BodyComponent />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 

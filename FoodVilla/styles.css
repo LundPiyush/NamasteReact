@@ -49,8 +49,9 @@
   list-style: none;
 }
 .nav-list a {
+  font-size: 15pt;
   color: white;
-  margin: 1em;
+  margin-left: 1em;
   cursor: pointer;
   text-decoration: none;
 }

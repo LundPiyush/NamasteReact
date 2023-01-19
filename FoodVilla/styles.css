@@ -114,3 +114,7 @@ h5 {
   margin: 20px;
   background: lightgray;
 }
+
+.menu {
+  display: flex;
+}

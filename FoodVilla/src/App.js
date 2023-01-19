@@ -9,6 +9,7 @@ import Error from "./components/Error";
 // import { IMG_CDN_URL } from "./components/constants";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Contact from "./components/Contact";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -47,6 +48,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/restuarant/:resId",
+        element: <RestaurantMenu />,
       },
     ],
   },

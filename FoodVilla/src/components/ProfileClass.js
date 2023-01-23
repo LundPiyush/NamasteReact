@@ -8,12 +8,14 @@ class Profile extends React.Component {
       count: 0,
       count2: 1,
     };
+    console.log("child - constructor" + this.props.name);
   }
   componentDidMount() {
     // this will be called after render method. We will calling the API CALLS in this method
-    console.log("ComponentDidmount");
+    console.log("child - ComponentDidmount " + this.props.name);
   }
   render() {
+    console.log("child - render" + this.props.name);
     return (
       <>
         <h1>Profile class component {this.props.name}</h1>

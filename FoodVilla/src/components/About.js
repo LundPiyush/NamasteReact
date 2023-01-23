@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
 import ProfileClasssComponent from "./ProfileClass";
 import ProfileFunctionalComponent from "./Profile";
+import React from "react";
 
-const About = () => {
+const About2 = () => {
   return (
     <div>
       About us page 🚀
@@ -14,4 +15,37 @@ const About = () => {
     </div>
   );
 };
+
+class About extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log("Parent Constructor");
+  }
+  componentDidMount() {
+    // Best place to make an API call
+    console.log("Parent ComponentDidMount");
+  }
+  render() {
+    console.log("Parent Render");
+    return (
+      <div>
+        About us page 🚀
+        {/* This is class component */}
+        <ProfileClasssComponent name={"First Child"} />
+        <ProfileClasssComponent name={"Second Child"} />
+      </div>
+    );
+  }
+}
 export default About;
+/**
+ * Parent Constructor
+ * Parent Render
+ *    First Child constructor
+ *    First Child render
+ *    Second Child constructor
+ *    Second Child render
+ *    First Child ComponentDidMount
+ *    Second Child ComponentDidMount
+ * Parent ComponentDidMount
+ */

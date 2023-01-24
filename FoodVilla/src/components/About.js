@@ -21,7 +21,7 @@ class About extends React.Component {
     super(props);
     console.log("Parent Constructor");
   }
-  componentDidMount() {
+  async componentDidMount() {
     // Best place to make an API call
     console.log("Parent ComponentDidMount");
   }
@@ -31,8 +31,9 @@ class About extends React.Component {
       <div>
         About us page 🚀
         {/* This is class component */}
-        <ProfileClasssComponent name={"First Child"} />
-        <ProfileClasssComponent name={"Second Child"} />
+        <ProfileFunctionalComponent name={"First Child"} />
+        {/* <ProfileClasssComponent name={"First Child"} /> */}
+        {/* <ProfileClasssComponent name={"Second Child"} /> */}
       </div>
     );
   }
@@ -45,6 +46,9 @@ export default About;
  *    First Child render
  *    Second Child constructor
  *    Second Child render
+ *
+ *  DOM IS UPDATED FOR CHILDREN
+ *
  *    First Child ComponentDidMount
  *    Second Child ComponentDidMount
  * Parent ComponentDidMount

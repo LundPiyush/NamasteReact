@@ -3,12 +3,8 @@ import { Link } from "react-router-dom";
 import { restaurantList } from "./constants";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import { filterData } from "../utils/helper";
 
-function filterData(searchText, restaurants) {
-  return restaurants.filter((restaurant) =>
-    restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
-  );
-}
 // unique key(best practice) >> index as the key(use only if there is no unique key) >>> no key(not acceptable)
 const BodyComponent = () => {
   // Use state is a function and Hooks nothing but just a normal function which returns array

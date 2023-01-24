@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import useRestaurant from "../utils/useRestaurant";
 import { IMG_CDN_URL } from "./constants";
 import Shimmer from "./Shimmer";
 
@@ -7,19 +8,8 @@ const RestaurantMenu = () => {
   // to read dynamical URL useParams
   const params = useParams();
   const { resId } = params; // destructuring
-  const [restaurantMenu, setRestaurantMenu] = useState(null);
 
-  useEffect(() => {
-    getRestaurantDetails();
-  });
-  async function getRestaurantDetails() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/v4/full?lat=19.0759837&lng=72.8776559&menuId=" +
-        resId
-    );
-    const json = await data.json();
-    setRestaurantMenu(json.data);
-  }
+  const restaurant = useRestaurant(resId); // This is custom hook
 
   return !restaurantMenu ? (
     <Shimmer />

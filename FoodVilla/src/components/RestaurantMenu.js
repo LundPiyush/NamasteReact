@@ -11,24 +11,24 @@ const RestaurantMenu = () => {
 
   const restaurant = useRestaurant(resId); // This is custom hook
 
-  return !restaurantMenu ? (
+  return !restaurant ? (
     <Shimmer />
   ) : (
     <div className="menu">
       <div>
-        {restaurantMenu.length}
+        {restaurant.length}
         <h1>Restaurant menu id :{resId}</h1>
-        <h3>{restaurantMenu?.name}</h3>
-        <h3>{restaurantMenu?.city}</h3>
-        <h3>{restaurantMenu?.costForTwo / 100}</h3>
-        <h3>{restaurantMenu?.avgRating} stars</h3>
-        <h3>{restaurantMenu?.area}</h3>
-        <img src={IMG_CDN_URL + restaurantMenu?.cloudinaryImageId} />
+        <h3>{restaurant?.name}</h3>
+        <h3>{restaurant?.city}</h3>
+        <h3>{restaurant?.costForTwo / 100}</h3>
+        <h3>{restaurant?.avgRating} stars</h3>
+        <h3>{restaurant?.area}</h3>
+        <img src={IMG_CDN_URL + restaurant?.cloudinaryImageId} />
       </div>
       <div>
         <h3>Menu</h3>
         <ul>
-          {Object.values(restaurantMenu?.menu?.items).map((item) => (
+          {Object.values(restaurant?.menu?.items).map((item) => (
             <li key={item.id}>{item.name}</li>
           ))}
         </ul>

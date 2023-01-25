@@ -28,7 +28,10 @@ const HeaderComponent = () => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link href="/">Cart</Link>
+          <Link to="/">Cart</Link>
+        </li>
+        <li>
+          <Link to="/instamart">Instamart</Link>
         </li>
       </ul>
       <h1>{isOnline ? "🟢" : "🔴"}</h1>

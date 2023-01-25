@@ -1,9 +1,12 @@
 import { useState } from "react";
 import img from "../assets/fv.png";
 import { Link } from "react-router-dom";
+import useIsOnline from "../utils/useIsOnline";
 
 const HeaderComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const isOnline = useIsOnline();
+
   return (
     <nav className="nav-bar">
       <div className="logo-image">
@@ -25,9 +28,13 @@ const HeaderComponent = () => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link href="/">Cart</Link>
+          <Link to="/">Cart</Link>
+        </li>
+        <li>
+          <Link to="/instamart">Instamart</Link>
         </li>
       </ul>
+      <h1>{isOnline ? "🟢" : "🔴"}</h1>
       {isLoggedIn ? (
         <button onClick={() => setIsLoggedIn(false)}>Login</button>
       ) : (

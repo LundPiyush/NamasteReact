@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 
 import HeaderComponent from "./components/HeaderComponent";
@@ -11,6 +11,18 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
+import { lazy } from "react";
+import Shimmer from "./components/Shimmer";
+//import Instamart from "./components/Instamart";
+
+const Instamart = lazy(() => import("./components/Instamart")); // different way of loading Instamart components => lazy loading Instamart
+
+// Chunking
+// Code Splitting
+// Dynamic Bundling
+// Lazy Loading
+// On Demand Loading
+// Dynamic Import
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -59,6 +71,15 @@ const appRouter = createBrowserRouter([
       {
         path: "/restuarant/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/instamart",
+        element: (
+          // We wrap the instamart component in Suspense bcz of instamart is lazy loaded hence we don't want component should render before the code reaches the browser. fallback is props for loading some component till instamart component is loaded
+          <Suspense fallback={<Shimmer />}>
+            <Instamart />
+          </Suspense>
+        ),
       },
     ],
   },

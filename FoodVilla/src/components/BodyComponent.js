@@ -41,7 +41,7 @@ const BodyComponent = () => {
     <>
       <div className="search-container">
         <input
-          placeholder="Enter text"
+          placeholder="Search"
           type="text"
           className="search-input"
           value={searchText}
@@ -61,6 +61,7 @@ const BodyComponent = () => {
           Search
         </button>
       </div>
+      <p className="res-count">{filteredRestaurants.length + " restaurants"}</p>
       <div className="restaurant-list">
         {filteredRestaurants.map((restaurant) => {
           return (

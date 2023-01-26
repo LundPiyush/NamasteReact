@@ -75,15 +75,46 @@
     margin: 0.5em 1em;
   }
 }
-
+.search-container {
+  margin: 1em auto;
+  justify-content: center;
+  display: flex;
+  width: 90%;
+  padding: 1em;
+}
+.search-btn {
+  margin-left: 1em;
+  background-color: var(--primary-background);
+  color: white;
+  padding: 1em 2em;
+  font-size: 1.2rem;
+}
+.search-input {
+  width: 70%;
+  padding: 0.5em;
+  font-size: 1.2rem;
+  border-right: none;
+  border: 2px solid blue;
+}
+.search-input:hover {
+  box-shadow: 2px 2px 5px 5px grey;
+}
+.res-count {
+  font-size: 1.5rem;
+  margin-left: 3.5em;
+  font-weight: 700;
+}
 .card {
   width: 250px;
   height: 350px;
   padding: 1em;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   margin: 2em 2em;
 }
 
+.card:hover {
+  box-shadow: 5px 5px 10px 10px gray;
+}
 .card > img {
   width: 100%;
   padding-bottom: 1em;
@@ -106,6 +137,7 @@ h5 {
 .restaurant-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .shimmer-card {

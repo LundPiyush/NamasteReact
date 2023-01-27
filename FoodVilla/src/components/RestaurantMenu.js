@@ -27,9 +27,13 @@ const RestaurantMenu = () => {
           <h3>{restaurant?.city}</h3>
           <h3>{restaurant?.costForTwo / 100}</h3>
           <h3>{restaurant?.avgRating} stars</h3>
-          <h3>{restaurant?.area}</h3>
+          <h3>{restaurant?.area + ""}</h3>
         </div>
-        <div className="restaurant-offers"></div>
+        <div className="restaurant-offers">
+          <p className="offers">Offers:</p>
+          <p>{restaurant?.aggregatedDiscountInfo?.descriptionList[0]?.meta}</p>
+          <p>{restaurant?.aggregatedDiscountInfo?.descriptionList[1]?.meta}</p>
+        </div>
       </div>
       <div>
         <h3>Menu</h3>

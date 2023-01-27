@@ -166,6 +166,20 @@ h5 {
   padding: 2em;
 }
 .restaurant-offers {
+  padding: 1em;
+  font-size: 1.35rem;
+  position: relative;
+  border: 1px solid white;
+}
+.restaurant-offers .offers {
+  background-color: lightblue;
+  font-size: 1.7rem;
+  position: absolute;
+  padding: 0.5em;
+  transform: translate(-36px, -80px);
+}
+.restaurant-offers p {
+  margin-top: 1em;
 }
 .restaurant-cards {
   color: black;

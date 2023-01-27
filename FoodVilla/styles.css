@@ -147,8 +147,25 @@ h5 {
   background: lightgray;
 }
 
-.menu {
+.restaurant-menu {
   display: flex;
+  gap: 2em;
+  align-items: center;
+  padding: 3em;
+  background-color: lightblue;
+}
+.restaurant-img {
+  width: 100%;
+  width: 20em;
+}
+.restaurant-details h3 {
+  margin-top: 0.5em;
+}
+
+.restaurant-details {
+  padding: 2em;
+}
+.restaurant-offers {
 }
 .restaurant-cards {
   color: black;

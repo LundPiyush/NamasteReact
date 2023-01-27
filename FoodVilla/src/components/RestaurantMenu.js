@@ -15,15 +15,21 @@ const RestaurantMenu = () => {
     <Shimmer />
   ) : (
     <div className="menu">
-      <div>
-        {restaurant.length}
-        <h1>Restaurant menu id :{resId}</h1>
-        <h3>{restaurant?.name}</h3>
-        <h3>{restaurant?.city}</h3>
-        <h3>{restaurant?.costForTwo / 100}</h3>
-        <h3>{restaurant?.avgRating} stars</h3>
-        <h3>{restaurant?.area}</h3>
-        <img src={IMG_CDN_URL + restaurant?.cloudinaryImageId} />
+      <div className="restaurant-menu">
+        <div>
+          <img
+            className="restaurant-img"
+            src={IMG_CDN_URL + restaurant?.cloudinaryImageId}
+          />
+        </div>
+        <div className="restaurant-details">
+          <h3>{restaurant?.name}</h3>
+          <h3>{restaurant?.city}</h3>
+          <h3>{restaurant?.costForTwo / 100}</h3>
+          <h3>{restaurant?.avgRating} stars</h3>
+          <h3>{restaurant?.area}</h3>
+        </div>
+        <div className="restaurant-offers"></div>
       </div>
       <div>
         <h3>Menu</h3>
